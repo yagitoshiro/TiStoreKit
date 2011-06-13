@@ -37,7 +37,7 @@
 	// this method is called when the module is first loaded
 	// you *must* call the superclass
 	[super startup];
-	productRequestCallback = [NSMutableArray array];
+	productRequestCallback = [[NSMutableArray array] retain];
 	
 	NSLog(@"[INFO] %@ loaded",self);
 }
