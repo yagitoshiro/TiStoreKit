@@ -77,6 +77,7 @@
 		PaymentTransaction* t = [[[PaymentTransaction alloc] _initWithPageContext:[self pageContext] transaction:transaction] autorelease];
 		[self fireEvent:@"removed" withObject:[NSDictionary dictionaryWithObject:t forKey:@"transaction"]];
 	}
+  [[self queue] removeTransactionObserver:self];
 }
 
 - (void)paymentQueueRestoreCompletedTransactionsFinished:(SKPaymentQueue *)queue
