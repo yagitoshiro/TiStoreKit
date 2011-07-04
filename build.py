@@ -3,16 +3,18 @@
 # Appcelerator Titanium Module Packager
 #
 #
-import os, sys, glob
+import os, sys, glob, string
 import zipfile
+from datetime import date
 
 cwd = os.path.abspath(os.path.dirname(sys._getframe(0).f_code.co_filename))
+os.chdir(cwd)
 required_module_keys = ['name','version','moduleid','description','copyright','license','copyright','platform','minsdk']
 module_defaults = {
 	'description':'My module',
 	'author': 'Your Name',
 	'license' : 'Specify your license',
-	'copyright' : 'Copyright (c) 2010 by Your Company',
+	'copyright' : 'Copyright (c) %s by Your Company' % str(date.today().year),
 }
 module_license_default = "TODO: place your license here and we'll include it in the module distribution"
 
@@ -42,19 +44,23 @@ def read_ti_xcconfig():
 	return config
 
 def generate_doc(config):
-	docfile = os.path.join(cwd,'documentation','index.md')
-	if not os.path.exists(docfile):
-		print "Couldn't find documentation file at: %s" % docfile
+	docdir = os.path.join(cwd,'documentation')
+	if not os.path.exists(docdir):
+		print "Couldn't find documentation file at: %s" % docdir
 		return None
 	sdk = config['TITANIUM_SDK']
 	support_dir = os.path.join(sdk,'module','support')
 	sys.path.append(support_dir)
-	import markdown2
-	html_md = open(docfile).read()
-	return markdown2.markdown(html_md)
+	import markdown
+	documentation = []
+	for file in os.listdir(docdir):
+		md = open(os.path.join(docdir,file)).read()
+		html = markdown.markdown(md)
+		documentation.append({file:html});
+	return documentation
 
 def compile_js(manifest,config):
-	js_file = os.path.join(cwd,'assets','jp.masuidrive.ti.storekit.js')
+	js_file = os.path.join(cwd,'assets','jp.masuidrive.tistorekit.js')
 	if not os.path.exists(js_file): return
 	
 	sdk = config['TITANIUM_SDK']
@@ -68,7 +74,7 @@ def compile_js(manifest,config):
 	eq = path.replace('.','_')
 	method = '  return %s;' % method
 	
-	f = os.path.join(cwd,'Classes','JpMasuidriveTiStorekitModuleAssets.m')
+	f = os.path.join(cwd,'Classes','JpMasuidriveTistorekitModuleAssets.m')
 	c = open(f).read()
 	idx = c.find('return ')
 	before = c[0:idx]
@@ -92,7 +98,7 @@ def warn(msg):
 	print "[WARN] %s" % msg	
 
 def validate_license():
-	c = open('LICENSE').read()
+	c = open(os.path.join(cwd,'LICENSE')).read()
 	if c.find(module_license_default)!=1:
 		warn('please update the LICENSE file with your license text before distributing')
 			
@@ -115,7 +121,7 @@ def validate_manifest():
 			if curvalue==defvalue: warn("please update the manifest key: '%s' to a non-default value" % key)
 	return manifest,path
 
-ignoreFiles = ['.DS_Store','.gitignore','libTitanium.a','titanium.jar','README','jp.masuidrive.ti.storekit.js']
+ignoreFiles = ['.DS_Store','.gitignore','libTitanium.a','titanium.jar','README','jp.masuidrive.tistorekit.js']
 ignoreDirs = ['.DS_Store','.svn','.git','CVSROOT']
 
 def zip_dir(zf,dir,basepath,ignore=[]):
@@ -164,10 +170,13 @@ def package_module(manifest,mf,config):
 	zf.write(mf,'%s/manifest' % modulepath)
 	libname = 'lib%s.a' % moduleid
 	zf.write('build/%s' % libname, '%s/%s' % (modulepath,libname))
-	html = generate_doc(config)
-	if html!=None:
-		zf.writestr('%s/documentation/index.html'%modulepath,html)
-	for dn in ('assets','example'):
+	docs = generate_doc(config)
+	if docs!=None:
+		for doc in docs:
+			for file, html in doc.iteritems():
+				filename = string.replace(file,'.md','.html')
+				zf.writestr('%s/documentation/%s'%(modulepath,filename),html)
+	for dn in ('assets','example','platform'):
 	  if os.path.exists(dn):
 		  zip_dir(zf,dn,'%s/%s' % (modulepath,dn),['README'])
 	zf.write('LICENSE','%s/LICENSE' % modulepath)

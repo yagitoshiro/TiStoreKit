@@ -6,12 +6,12 @@ version: 0.1
 description: My module
 author: Your Name
 license: Specify your license
-copyright: Copyright (c) 2010 by Your Company
+copyright: Copyright (c) 2011 by Your Company
 
 
 # these should not be edited
 name: tistorekit
-moduleid: jp.masuidrive.ti.storekit
-guid: b0c990ec-bb25-4627-9994-1f11f5076375
+moduleid: jp.masuidrive.tistorekit
+guid: ea0b49d1-c7ee-4e27-8a3b-182b915e01b3
 platform: iphone
-minsdk: 1.4.0
+minsdk: 1.7.1
