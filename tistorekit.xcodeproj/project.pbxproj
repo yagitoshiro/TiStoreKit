@@ -26,6 +26,14 @@
 		24DD6CFA1134B3F500162E58 /* JpMasuidriveTistorekitModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD6CF81134B3F500162E58 /* JpMasuidriveTistorekitModule.m */; };
 		24DE9E1111C5FE74003F90F6 /* JpMasuidriveTistorekitModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DE9E0F11C5FE74003F90F6 /* JpMasuidriveTistorekitModuleAssets.h */; };
 		24DE9E1211C5FE74003F90F6 /* JpMasuidriveTistorekitModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* JpMasuidriveTistorekitModuleAssets.m */; };
+		3822074913C1F395006ECEF0 /* Payment.h in Headers */ = {isa = PBXBuildFile; fileRef = 3822074113C1F395006ECEF0 /* Payment.h */; };
+		3822074A13C1F395006ECEF0 /* Payment.m in Sources */ = {isa = PBXBuildFile; fileRef = 3822074213C1F395006ECEF0 /* Payment.m */; };
+		3822074B13C1F395006ECEF0 /* PaymentQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3822074313C1F395006ECEF0 /* PaymentQueue.h */; };
+		3822074C13C1F395006ECEF0 /* PaymentQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3822074413C1F395006ECEF0 /* PaymentQueue.m */; };
+		3822074D13C1F395006ECEF0 /* PaymentTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = 3822074513C1F395006ECEF0 /* PaymentTransaction.h */; };
+		3822074E13C1F395006ECEF0 /* PaymentTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 3822074613C1F395006ECEF0 /* PaymentTransaction.m */; };
+		3822074F13C1F395006ECEF0 /* Product.h in Headers */ = {isa = PBXBuildFile; fileRef = 3822074713C1F395006ECEF0 /* Product.h */; };
+		3822075013C1F395006ECEF0 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 3822074813C1F395006ECEF0 /* Product.m */; };
 		AA747D9F0F9514B9006C5449 /* JpMasuidriveTistorekit_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* JpMasuidriveTistorekit_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -36,19 +44,27 @@
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = "tistorekit";
+			remoteInfo = tistorekit;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		24DD6CF71134B3F500162E58 /* JpMasuidriveTistorekitModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "JpMasuidriveTistorekitModule.h"; path = "Classes/JpMasuidriveTistorekitModule.h"; sourceTree = "<group>"; };
-		24DD6CF81134B3F500162E58 /* JpMasuidriveTistorekitModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "JpMasuidriveTistorekitModule.m"; path = "Classes/JpMasuidriveTistorekitModule.m"; sourceTree = "<group>"; };
+		24DD6CF71134B3F500162E58 /* JpMasuidriveTistorekitModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JpMasuidriveTistorekitModule.h; path = Classes/JpMasuidriveTistorekitModule.h; sourceTree = "<group>"; };
+		24DD6CF81134B3F500162E58 /* JpMasuidriveTistorekitModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JpMasuidriveTistorekitModule.m; path = Classes/JpMasuidriveTistorekitModule.m; sourceTree = "<group>"; };
 		24DD6D1B1134B66800162E58 /* titanium.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = titanium.xcconfig; sourceTree = "<group>"; };
-		24DE9E0F11C5FE74003F90F6 /* JpMasuidriveTistorekitModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "JpMasuidriveTistorekitModuleAssets.h"; path = "Classes/JpMasuidriveTistorekitModuleAssets.h"; sourceTree = "<group>"; };
-		24DE9E1011C5FE74003F90F6 /* JpMasuidriveTistorekitModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "JpMasuidriveTistorekitModuleAssets.m"; path = "Classes/JpMasuidriveTistorekitModuleAssets.m"; sourceTree = "<group>"; };
-		AA747D9E0F9514B9006C5449 /* JpMasuidriveTistorekit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JpMasuidriveTistorekit_Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		24DE9E0F11C5FE74003F90F6 /* JpMasuidriveTistorekitModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JpMasuidriveTistorekitModuleAssets.h; path = Classes/JpMasuidriveTistorekitModuleAssets.h; sourceTree = "<group>"; };
+		24DE9E1011C5FE74003F90F6 /* JpMasuidriveTistorekitModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JpMasuidriveTistorekitModuleAssets.m; path = Classes/JpMasuidriveTistorekitModuleAssets.m; sourceTree = "<group>"; };
+		3822074113C1F395006ECEF0 /* Payment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Payment.h; path = Classes/Payment.h; sourceTree = "<group>"; };
+		3822074213C1F395006ECEF0 /* Payment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Payment.m; path = Classes/Payment.m; sourceTree = "<group>"; };
+		3822074313C1F395006ECEF0 /* PaymentQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaymentQueue.h; path = Classes/PaymentQueue.h; sourceTree = "<group>"; };
+		3822074413C1F395006ECEF0 /* PaymentQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaymentQueue.m; path = Classes/PaymentQueue.m; sourceTree = "<group>"; };
+		3822074513C1F395006ECEF0 /* PaymentTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaymentTransaction.h; path = Classes/PaymentTransaction.h; sourceTree = "<group>"; };
+		3822074613C1F395006ECEF0 /* PaymentTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaymentTransaction.m; path = Classes/PaymentTransaction.m; sourceTree = "<group>"; };
+		3822074713C1F395006ECEF0 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Product.h; path = Classes/Product.h; sourceTree = "<group>"; };
+		3822074813C1F395006ECEF0 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Product.m; path = Classes/Product.m; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* JpMasuidriveTistorekit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JpMasuidriveTistorekit_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D2AAC07E0554694100DB518D /* libJpMasuidriveTistorekit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libJpMasuidriveTistorekit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2AAC07E0554694100DB518D /* libJpMasuidriveTistorekit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJpMasuidriveTistorekit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +95,7 @@
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
 			);
-			name = "tistorekit";
+			name = tistorekit;
 			sourceTree = "<group>";
 		};
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
@@ -93,6 +109,14 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3822074113C1F395006ECEF0 /* Payment.h */,
+				3822074213C1F395006ECEF0 /* Payment.m */,
+				3822074313C1F395006ECEF0 /* PaymentQueue.h */,
+				3822074413C1F395006ECEF0 /* PaymentQueue.m */,
+				3822074513C1F395006ECEF0 /* PaymentTransaction.h */,
+				3822074613C1F395006ECEF0 /* PaymentTransaction.m */,
+				3822074713C1F395006ECEF0 /* Product.h */,
+				3822074813C1F395006ECEF0 /* Product.m */,
 				24DE9E0F11C5FE74003F90F6 /* JpMasuidriveTistorekitModuleAssets.h */,
 				24DE9E1011C5FE74003F90F6 /* JpMasuidriveTistorekitModuleAssets.m */,
 				24DD6CF71134B3F500162E58 /* JpMasuidriveTistorekitModule.h */,
@@ -120,6 +144,10 @@
 				AA747D9F0F9514B9006C5449 /* JpMasuidriveTistorekit_Prefix.pch in Headers */,
 				24DD6CF91134B3F500162E58 /* JpMasuidriveTistorekitModule.h in Headers */,
 				24DE9E1111C5FE74003F90F6 /* JpMasuidriveTistorekitModuleAssets.h in Headers */,
+				3822074913C1F395006ECEF0 /* Payment.h in Headers */,
+				3822074B13C1F395006ECEF0 /* PaymentQueue.h in Headers */,
+				3822074D13C1F395006ECEF0 /* PaymentTransaction.h in Headers */,
+				3822074F13C1F395006ECEF0 /* Product.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +166,8 @@
 			);
 			dependencies = (
 			);
-			name = "tistorekit";
-			productName = "tistorekit";
+			name = tistorekit;
+			productName = tistorekit;
 			productReference = D2AAC07E0554694100DB518D /* libJpMasuidriveTistorekit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
@@ -192,6 +220,10 @@
 			files = (
 				24DD6CFA1134B3F500162E58 /* JpMasuidriveTistorekitModule.m in Sources */,
 				24DE9E1211C5FE74003F90F6 /* JpMasuidriveTistorekitModuleAssets.m in Sources */,
+				3822074A13C1F395006ECEF0 /* Payment.m in Sources */,
+				3822074C13C1F395006ECEF0 /* PaymentQueue.m in Sources */,
+				3822074E13C1F395006ECEF0 /* PaymentTransaction.m in Sources */,
+				3822075013C1F395006ECEF0 /* Product.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,15 +245,15 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
-				DSTROOT = "/tmp/JpMasuidriveTistorekit.dst";
+				DSTROOT = /tmp/JpMasuidriveTistorekit.dst;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "JpMasuidriveTistorekit_Prefix.pch";
+				GCC_PREFIX_HEADER = JpMasuidriveTistorekit_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
-				PRODUCT_NAME = "JpMasuidriveTistorekit";
+				PRODUCT_NAME = JpMasuidriveTistorekit;
 			};
 			name = Debug;
 		};
@@ -231,12 +263,12 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				DSTROOT = "/tmp/JpMasuidriveTistorekit.dst";
+				DSTROOT = /tmp/JpMasuidriveTistorekit.dst;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "JpMasuidriveTistorekit_Prefix.pch";
+				GCC_PREFIX_HEADER = JpMasuidriveTistorekit_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
-				PRODUCT_NAME = "JpMasuidriveTistorekit";
+				PRODUCT_NAME = JpMasuidriveTistorekit;
 			};
 			name = Release;
 		};
