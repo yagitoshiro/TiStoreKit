@@ -34,6 +34,7 @@
 		3822074E13C1F395006ECEF0 /* PaymentTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 3822074613C1F395006ECEF0 /* PaymentTransaction.m */; };
 		3822074F13C1F395006ECEF0 /* Product.h in Headers */ = {isa = PBXBuildFile; fileRef = 3822074713C1F395006ECEF0 /* Product.h */; };
 		3822075013C1F395006ECEF0 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 3822074813C1F395006ECEF0 /* Product.m */; };
+		38C9C533143E0B8200A21451 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C9C532143E0B8100A21451 /* StoreKit.framework */; };
 		AA747D9F0F9514B9006C5449 /* JpMasuidriveTistorekit_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* JpMasuidriveTistorekit_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,7 @@
 		3822074613C1F395006ECEF0 /* PaymentTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaymentTransaction.m; path = Classes/PaymentTransaction.m; sourceTree = "<group>"; };
 		3822074713C1F395006ECEF0 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Product.h; path = Classes/Product.h; sourceTree = "<group>"; };
 		3822074813C1F395006ECEF0 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Product.m; path = Classes/Product.m; sourceTree = "<group>"; };
+		38C9C532143E0B8100A21451 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		AA747D9E0F9514B9006C5449 /* JpMasuidriveTistorekit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JpMasuidriveTistorekit_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libJpMasuidriveTistorekit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJpMasuidriveTistorekit.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38C9C533143E0B8200A21451 /* StoreKit.framework in Frameworks */,
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,6 +93,7 @@
 		0867D691FE84028FC02AAC07 /* tistorekit */ = {
 			isa = PBXGroup;
 			children = (
+				38C9C532143E0B8100A21451 /* StoreKit.framework */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
